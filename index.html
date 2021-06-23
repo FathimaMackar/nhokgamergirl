@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("bg-fixed-1.jpg");
+  
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+ 
+  color: white;
+  font-weight: bold;
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+.nk-social-links,
+.nk-social-links-2,
+.nk-social-links-3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    margin-right: -2px;
+    margin-left: -2px;
+    list-style-type: none;
+}
+
+.nk-social-links.nk-social-links-center,
+.nk-social-links-2.nk-social-links-center,
+.nk-social-links-3.nk-social-links-center {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.nk-social-links.nk-social-links-left,
+.nk-social-links-2.nk-social-links-left,
+.nk-social-links-3.nk-social-links-left {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+}
+
+.nk-social-links.nk-social-links-right,
+.nk-social-links-2.nk-social-links-right,
+.nk-social-links-3.nk-social-links-right {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+}
+
+.nk-social-links > li > *,
+.nk-social-links-2 > li > *,
+.nk-social-links-3 > li > * {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 3px;
+    font-size: .9em;
+    line-height: 20px;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 10px;
+    -webkit-transition: .15s background-color, .15s color;
+    -o-transition: .15s background-color, .15s color;
+    transition: .15s background-color, .15s color;
+}
+
+.nk-social-links > li > *, .nk-social-links > li > *:hover, .nk-social-links > li > *:focus, .nk-social-links > li > *:active,
+.nk-social-links-2 > li > *,
+.nk-social-links-2 > li > *:hover,
+.nk-social-links-2 > li > *:focus,
+.nk-social-links-2 > li > *:active,
+.nk-social-links-3 > li > *,
+.nk-social-links-3 > li > *:hover,
+.nk-social-links-3 > li > *:focus,
+.nk-social-links-3 > li > *:active {
+    color: #171e22;
+}
+
+.nk-social-links > li > *:hover, .nk-social-links > li > *.hover,
+.nk-social-links-2 > li > *:hover,
+.nk-social-links-2 > li > *.hover,
+.nk-social-links-3 > li > *:hover,
+.nk-social-links-3 > li > *.hover {
+    color: #fff;
+    background-color: #dd163b;
+}
+
+
+.nk-social-links > li > *.nk-social-instagram:hover, .nk-social-links > li > *.nk-social-instagram.hover, .nk-social-links.nk-social-links-3 > li > *.nk-social-instagram:hover, .nk-social-links.nk-social-links-3 > li > *.nk-social-instagram.hover,
+.nk-social-links-2 > li > *.nk-social-instagram:hover,
+.nk-social-links-2 > li > *.nk-social-instagram.hover,
+.nk-social-links-2.nk-social-links-3 > li > *.nk-social-instagram:hover,
+.nk-social-links-2.nk-social-links-3 > li > *.nk-social-instagram.hover,
+.nk-social-links-3 > li > *.nk-social-instagram:hover,
+.nk-social-links-3 > li > *.nk-social-instagram.hover,
+.nk-social-links-3.nk-social-links-3 > li > *.nk-social-instagram:hover,
+.nk-social-links-3.nk-social-links-3 > li > *.nk-social-instagram.hover {
+    color: #fff;
+    background-color: #527198;
+}
+
+
+.nk-social-links > li > *.nk-social-youtube:hover, .nk-social-links > li > *.nk-social-youtube.hover, .nk-social-links.nk-social-links-3 > li > *.nk-social-youtube:hover, .nk-social-links.nk-social-links-3 > li > *.nk-social-youtube.hover,
+.nk-social-links-2 > li > *.nk-social-youtube:hover,
+.nk-social-links-2 > li > *.nk-social-youtube.hover,
+.nk-social-links-2.nk-social-links-3 > li > *.nk-social-youtube:hover,
+.nk-social-links-2.nk-social-links-3 > li > *.nk-social-youtube.hover,
+.nk-social-links-3 > li > *.nk-social-youtube:hover,
+.nk-social-links-3 > li > *.nk-social-youtube.hover,
+.nk-social-links-3.nk-social-links-3 > li > *.nk-social-youtube:hover,
+.nk-social-links-3.nk-social-links-3 > li > *.nk-social-youtube.hover {
+    color: #fff;
+    background-color: #f00;
+}
+
+.nk-social-links-2 {
+    margin-right: -4px;
+    margin-left: -4px;
+}
+
+.nk-social-links-2 > li > * {
+    width: 26px;
+    height: 26px;
+    margin: 3px 5px;
+    font-size: 1.1em;
+    line-height: 26px;
+    background-color: #fff;
+    border-radius: 13px;
+}
+
+.nk-social-links-3 > li > * {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    margin: 0;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #4e585f;
+    border-radius: 0;
+}
+
+.nk-social-links-3 > li > * > svg,
+.nk-social-links-3 > li > * > span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    margin-top: -7px;
+    margin-left: -7px;
+}
+
+.nk-social-links-3 > li > * > svg {
+    width: 18px;
+    height: 18px;
+    margin-top: -9px;
+    margin-left: -9px;
+}
+
+.nk-social-links-3 > li > * > svg.svg-inline--fa {
+    width: 18px;
+}
+
+.nk-social-links-3.nk-social-links-cols-5 > li {
+    width: 20%;
+}
+
+.nk-social-links-3.nk-social-links-cols-5 > li:nth-child(6n) > a {
+    background-color: #556067;
+}
+
+.nk-social-links-3.nk-social-links-cols-5 > li:nth-child(6n+2) > a {
+    background-color: #5c6870;
+}
+
+.nk-social-links-3.nk-social-links-cols-5 > li:nth-child(6n+4) > a {
+    background-color: #65727b;
+}
+
+.nk-social-links-3.nk-social-links-cols-4 > li {
+    width: 25%;
+}
+
+.nk-social-links-3.nk-social-links-cols-4 > li:nth-child(5n) > a {
+    background-color: #556067;
+}
+
+.nk-social-links-3.nk-social-links-cols-4 > li:nth-child(5n+2) > a {
+    background-color: #5c6870;
+}
+
+.nk-social-links-3.nk-social-links-cols-4 > li:nth-child(5n+4) > a {
+    background-color: #65727b;
+}
+
+.nk-social-links-3.nk-social-links-cols-3 > li {
+    width: 33.333%;
+}
+
+.nk-social-links-3.nk-social-links-cols-3 > li:nth-child(4n) > a {
+    background-color: #556067;
+}
+
+.nk-social-links-3.nk-social-links-cols-3 > li:nth-child(4n+2) > a {
+    background-color: #5c6870;
+}
+
+.nk-social-links-3.nk-social-links-cols-3 > li:nth-child(4n+4) > a {
+    background-color: #65727b;
+}
+
+.nk-social-links-3.nk-social-links-cols-2 > li {
+    width: 50%;
+}
+
+.nk-social-links-3.nk-social-links-cols-2 > li:nth-child(3n) > a {
+    background-color: #556067;
+}
+
+.nk-social-links-3.nk-social-links-cols-2 > li:nth-child(3n+2) > a {
+    background-color: #5c6870;
+}
+
+.nk-social-links-3.nk-social-links-cols-2 > li:nth-child(3n+4) > a {
+    background-color: #65727b;
+}
+
+.nk-widget-highlighted .nk-widget-content .nk-social-links-3 {
+    margin-top: -21px;
+    margin-right: -24px;
+    margin-bottom: -21px;
+    margin-left: -24px;
+}
+</style>
+ <title>Coming Soon</title>
+</head>
+<body>
+
+<div class="bg-image"></div>
+
+<div class="bg-text">
+  <h2> <img src="logo-2.png" ></h2>
+  <h1 style="font-size:50px">COMING SOON</h1>
+   <p style="font-size:30px; color: #c77b12">
+
+    <a href="https://instagram.com/nhok_girlgamer?utm_medium=copy_link"><i class="fa fa-instagram"></i> </a>
+      &nbsp
+    <a href="https://www.youtube.com/channel/UCk2RJSZGpD9xo7Vdhz5syAg"><i class="fa fa-youtube-play"></i> </a> 
+ 
+</p>
+        
+   
+      
+</div>
+
+</body>
+</html>
